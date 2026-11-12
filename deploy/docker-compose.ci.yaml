@@ -1,0 +1,8 @@
+# Override cho pipeline: chạy image đã build/push thay vì build lại.
+# Dùng: REGISTRY=... IMAGE_TAG=... docker compose -f docker-compose.yaml -f deploy/docker-compose.ci.yaml up -d --no-build
+services:
+  api:
+    image: ${REGISTRY}/devops-lab-api:${IMAGE_TAG}
+
+  crawler:
+    image: ${REGISTRY}/devops-lab-app:${IMAGE_TAG}
