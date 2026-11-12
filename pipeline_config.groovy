@@ -6,6 +6,10 @@ jte {
 
 libraries {
     lib {
+        // pre_build (job Pipeline thường không có `checkout scm`)
+        git_url    = 'https://github.com/Hymeno-Ran/crawling-module.git'
+        git_branch = 'docker-compose'
+
         // unit_test
         python_version = '3.12'
         requirements   = 'requirements/dev.txt'
