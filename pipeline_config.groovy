@@ -1,6 +1,8 @@
 // Config JTE cho devops-lab: chỉ khai báo template + tham số.
 // Template và step nằm ở repo pipeline-config / pipeline-lib.
-pipeline_template = 'python-docker-ci'
+jte {
+    pipeline_template = 'python-docker-ci'
+}
 
 libraries {
     lib {
